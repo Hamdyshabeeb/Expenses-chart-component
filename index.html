@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<!-- google font DM Sans -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- stylesheet -->
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Frontend Mentor | Expenses chart component</title>
+	</head>
+	<body>
+		<section class="card-container">
+			<header class="card-header">
+				<div>
+					<h2>My balance</h2>
+					<p>$921.48</p>
+				</div>
+				<div class="logo"><img src="images/logo.svg" alt="card logo" /></div>
+			</header>
+			<section class="card-body">
+				<h2 class="card-body-title">Spending - Last 7 days</h2>
+				<div class="card-body-chart">
+					<div class="chart-bar-container">
+						<p class="chart-bar-value">$52.36</p>
+						<div class="chart-bar"><span class="sr-only">bar</span></div>
+						<p class="chart-day">mon</p>
+					</div>
+					<div class="chart-bar-container">
+						<p class="chart-bar-value">$52.36</p>
+						<div class="chart-bar"><span class="sr-only">bar</span></div>
+						<p class="chart-day">tus</p>
+					</div>
+					<div class="chart-bar-container">
+						<p class="chart-bar-value">$52.36</p>
+						<div class="chart-bar"><span class="sr-only">bar</span></div>
+						<p class="chart-day">wed</p>
+					</div>
+					<div class="chart-bar-container">
+						<p class="chart-bar-value">$52.36</p>
+						<div class="chart-bar"><span class="sr-only">bar</span></div>
+						<p class="chart-day">thu</p>
+					</div>
+					<div class="chart-bar-container">
+						<p class="chart-bar-value">$52.36</p>
+						<div class="chart-bar"></div>
+						<p class="chart-day">fri</p>
+					</div>
+					<div class="chart-bar-container">
+						<p class="chart-bar-value">$52.36</p>
+						<div class="chart-bar"><span class="sr-only">bar</span></div>
+						<p class="chart-day">sat</p>
+					</div>
+					<div class="chart-bar-container">
+						<p class="chart-bar-value">$52.36</p>
+						<div class="chart-bar"><span class="sr-only">bar</span></div>
+						<p class="chart-day">sun</p>
+					</div>
+				</div>
+			</section>
+			<footer class="card-footer">
+				<div>
+					<div>
+						<h3>Total this month</h3>
+						<p>$478.33</p>
+					</div>
+					<div>
+						<p>+2.4%</p>
+						<p>from last month</p>
+					</div>
+				</div>
+			</footer>
+		</section>
+	</body>
+</html>
