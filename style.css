@@ -1,0 +1,189 @@
+/* 01 - Reset */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* reset font size to 1rem = 10px */
+	font-size: 62.5%;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+	display: block;
+}
+/* 02 - Custom Properties */
+:root {
+	/*  colors */
+	--primary-hot: 10, 79%, 65%;
+	--primary-cold: 186, 34%, 60%;
+	--neutral-dark: 25, 47%, 15%;
+	--neutral-medium: 28, 10%, 53%;
+	--neutral-light: 27, 66%, 92%;
+	--neutral-lighter: 33, 100%, 98%;
+}
+/* 03 - Body Setup */
+body {
+	font-family: 'DM Sans', sans-serif;
+	font-size: 1.8rem;
+	min-height: 100vh;
+	background-color: hsl(var(--neutral-light));
+}
+/* 04 - Utlities */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap; /* added line */
+	border: 0;
+}
+
+.flex {
+	display: flex;
+}
+
+.flow > * + * {
+	margin-top: 2rem;
+}
+
+/* 05 - Components */
+
+/* 05 -01- card */
+
+.card-container {
+	max-width: 45rem;
+	width: 90%;
+	margin: min(5vh, 15rem) auto;
+}
+
+.card-header,
+.white-section {
+	padding: 1.2em 1.7em;
+	box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.1);
+	border-radius: 1.2rem;
+}
+.card-footer,
+.card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.card-header {
+	background-color: hsl(var(--primary-hot));
+	margin-bottom: 1.5rem;
+	color: hsl(var(--neutral-lighter));
+}
+
+.card-header h2 {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: hsl(var(--neutral-lighter), 0.8);
+	margin-bottom: 0.5rem;
+}
+
+.card-header .logo {
+	width: 6rem;
+}
+
+.card-header p {
+	font-size: 2.5rem;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+.white-section {
+	background-color: hsl(var(--neutral-lighter));
+}
+
+.card-body {
+}
+.card-body-title {
+	margin-bottom: 5rem;
+	font-size: clamp(1.8rem, 0.8rem + 3.8vw, 3rem);
+	font-weight: 700;
+	color: hsl(var(--neutral-dark));
+}
+.card-body-chart {
+	display: flex;
+	justify-content: space-between;
+}
+.chart-bar-container {
+	text-align: center;
+	width: calc((100% / 7) - 3%);
+	cursor: pointer;
+}
+
+.chart-bar {
+	height: 200px;
+	background-color: hsl(var(--primary-hot));
+	border-radius: 5px;
+	position: relative;
+}
+.chart-bar-container.today .chart-bar {
+	background-color: hsl(var(--primary-cold));
+}
+
+.chart-bar-container:hover .chart-bar,
+.chart-bar-container:focus .chart-bar {
+	background-color: hsla(var(--primary-hot), 0.8);
+}
+.chart-bar-container.today:hover .chart-bar,
+.chart-bar-container.today:focus .chart-bar {
+	background-color: hsla(var(--primary-cold), 0.8);
+}
+
+.chart-bar-value {
+	background-color: hsl(var(--neutral-dark));
+	color: hsl(var(--neutral-lighter));
+	font-size: clamp(1rem, 1rem + 0.5vw, 1.4rem);
+	position: absolute;
+	left: 50%;
+	top: -5px;
+	transform: translate(-50%, -100%);
+	border-radius: 3px;
+	padding: 0.4em 0.1em;
+	width: 138%;
+	box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.2),
+		inset 0px 1px 1px 0px rgba(255, 255, 255, 0.1);
+	border: 1px solid #000;
+	opacity: 0;
+}
+.chart-bar-container:hover .chart-bar-value {
+	opacity: 1;
+}
+.chart-day {
+	font-size: clamp(1.1rem, 1rem + 0.6vw, 2rem);
+	color: hsl(var(--neutral-medium));
+	margin-top: 0.5rem;
+}
+.card-footer {
+	padding-top: 2rem;
+	border-top: 2px solid hsl(var(--neutral-light));
+}
+
+.card-footer_total h3,
+.card-footer_diff p:last-child {
+	font-size: 1.3rem;
+	font-weight: 400;
+	color: hsla(var(--neutral-medium), 0.7);
+}
+.card-footer_total p {
+	font-size: 3.8rem;
+	color: hsl(var(--neutral-dark));
+	font-weight: 700;
+}
+
+.card-footer_diff p:first-child {
+	color: hsl(var(--neutral-dark));
+	text-align: right;
+	font-size: 1.5rem;
+}
