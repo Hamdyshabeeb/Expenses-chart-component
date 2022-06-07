@@ -115,11 +115,13 @@ body {
 .card-body-chart {
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-end;
 }
 .chart-bar-container {
 	text-align: center;
 	width: calc((100% / 7) - 3%);
 	cursor: pointer;
+	list-style: none;
 }
 
 .chart-bar {
