@@ -66,6 +66,16 @@ body {
 	overflow: hidden;
 }
 
+@media (min-width: 35em) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.card-container {
+		margin: 0 auto;
+	}
+}
 .card-header,
 .white-section {
 	padding: 1.2em 1.7em;
