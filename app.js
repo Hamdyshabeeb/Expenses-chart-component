@@ -1,3 +1,5 @@
+import { chartAnimation } from './animation.js';
+
 /**
  * @description function used to get the array of expense object then call createChart function to create  the chart bar HTML
  */
@@ -42,6 +44,7 @@ function createChart(chartBody, expenseData) {
         `;
 	});
 	chartBody.innerHTML = chartInner;
+	chartAnimation();
 }
 /**
  *@description function to extract highest value from expense array

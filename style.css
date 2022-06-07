@@ -63,6 +63,7 @@ body {
 	max-width: 45rem;
 	width: 90%;
 	margin: min(5vh, 15rem) auto;
+	overflow: hidden;
 }
 
 .card-header,
