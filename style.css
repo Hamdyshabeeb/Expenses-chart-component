@@ -104,8 +104,6 @@ body {
 	background-color: hsl(var(--neutral-lighter));
 }
 
-.card-body {
-}
 .card-body-title {
 	margin-bottom: 5rem;
 	font-size: clamp(1.8rem, 0.8rem + 3.8vw, 3rem);
